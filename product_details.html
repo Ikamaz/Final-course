@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your decoration website.">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="author" content="Irakli Mazmishvili">
+    <meta property="og:title" content="ArtDecor">
+    <meta property="og:description" content="Agwera.">
+    <meta property="og:image" content="/img/img123.png">
+    <meta property="og:url" content="">
+    <title>Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html" class="logo">Company</a>
+
+      <div id="burger" class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+
+      <div class="nav-links">
+          <div class="nav-product">
+              <a href="/gallery.html">გალერეა</a>
+              <a href="/decoration.html">ყველა პროდუქცია</a>
+          </div>
+
+          <div class="header-actions">
+              <div class="cart">
+                  <a href="/cart.html" class="cart-text">კალათა</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <section id="product-detail" class="product-detail">
+    <div class="product-container">
+        <div class="image-info-container">
+            <div class="main-image">
+                <img id="main-product-image" src="/img/product3.jpg" alt="Product Image" onclick="openLightbox(this.src)">
+            </div>
+            <div class="thumbnail-images">
+                <img class="thumbnail" src="/img/product1.jpg" alt="Product Thumbnail" onclick="changeImage('/img/product1.jpg')">
+                <img class="thumbnail" src="/img/product2.jpg" alt="Product Thumbnail" onclick="changeImage('/img/product2.jpg')">
+            </div>
+            <div class="product-info">
+                <h1>პროდუქციის დასახელება</h1>
+                <p class="code"><strong>კოდი -</strong> 12345</p>
+                <p class="category"><strong>კატეგორია -</strong> Category Name</p>
+                <p class="quantity"><strong>რაოდენობა -</strong> 10</p>
+                <p class="description"><strong>აღწერა -</strong> აღწერა</p>
+                <p class="price">100 ლარი</p>
+
+                <div class="product-actions">
+                    <form>
+                        <label for="quantity">რაოდენობა:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+                        <button type="submit" class="add-to-cart">კალათში დამატება</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="related-products">
+            <div class="related-products-header">
+                <h2>მსგავსი პროდუქცია</h2>
+            </div>
+            <div class="owl-carousel owl-theme" id="related-products-list">
+                <div class="related-product-card">
+                    <img src="/img/product1.jpg" alt="Related Product">
+                    <h3>პროდუქცია</h3>
+                    <p>10 ₾</p>
+                    <a href="/cart.html">
+                        <button class="add-to-cart">კალათში დამატება</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#related-products-list').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 3 }
+            }
+        });
+    });
+
+</script>
+
+    <footer>
+      <p>&copy; 2024 Company. თქვენი უფლებები დაცულია.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

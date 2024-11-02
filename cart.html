@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your decoration website.">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="author" content="Irakli Mazmishvili">
+    <meta property="og:title" content="ArtDecor">
+    <meta property="og:description" content="Agwera.">
+    <meta property="og:image" content="/img/img123.png">
+    <meta property="og:url" content="">
+    <title>Company</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <nav>
+      <a href="/index.html" class="logo">Company</a>
+
+      <div id="burger" class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+
+      <div class="nav-links">
+          <div class="nav-product">
+              <a href="/gallery.html">გალერეა</a>
+              <a href="/decoration.html">ყველა პროდუქცია</a>
+              <a href="/contact.html">კონტაქტი</a>
+          </div>
+          <div class="header-actions">
+              <div class="cart">
+                  <a href="/cart.html" class="cart-text">კალათა</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  <div class="main-container">
+    <div class="cart-container">
+        <h1>თქვენი კალათა</h1>
+        <div id="cartItems">
+            <div class="cart-item">
+                <div class="image-container">
+                    <img src="/img/product1.jpg" alt="Product">
+                </div>
+                <div class="item-details">
+                    <h2>პროდუქცია</h2>
+                    <p>კოდი: 12345</p>
+                    <p>კატეგორია: დეკორაცია</p>
+                </div>
+                <div class="item-price">10.00 ლარი</div>
+                <div class="item-remove">
+                    <a href="/delete_cart/1">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order-container">
+        <form>
+            <h2>პირადი ინფორმაცია</h2>
+
+            <div class="input-group">
+                <label for="receiver-name">მიმღების სახელი</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="input-group">
+                <label for="address">მიმღების მისამართი</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="input-group">
+                <label for="phone">მიმღების ტელეფონის ნომერი</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="order-total">ჯამი: <span id="totalPrice">10.00</span> ლ</div>
+
+            <input type="hidden" name="total_price" value="10.00">
+
+            <input type="submit" class="save-btn" value="ყიდვა" onclick="saved()">
+        </form>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Company. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+</html>
