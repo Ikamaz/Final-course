@@ -18,7 +18,7 @@
   </head>
   <body>
     <nav>
-      <a href="index.html" class="logo">Company</a>
+      <a href="/index.html" class="logo">Company</a>
 
       <div id="burger" class="burger">
           <div></div>
@@ -28,14 +28,14 @@
 
       <div class="nav-links">
           <div class="nav-product">
-              <a href="Final-course/gallery.html">გალერეა</a>
-              <a href="Final-course/decoration.html">ყველა პროდუქცია</a>
-              <a href="Final-course/contact.html">კონტაქტი</a>
+              <a href="/gallery.html">გალერეა</a>
+              <a href="/decoration.html">ყველა პროდუქცია</a>
+              <a href="/cart.html">კალათა</a>
           </div>
 
           <div class="header-actions">
               <div class="cart">
-                  <a href="Final-course/cart.html" class="cart-text">კალათა</a>
+                  <a href="/cart.html" class="cart-text">კალათა</a>
               </div>
           </div>
       </div>
@@ -44,11 +44,11 @@
     <div class="product-container">
         <div class="image-info-container">
             <div class="main-image">
-                <img id="main-product-image" src="/img/product3.jpg" alt="Product Image">
+                <img id="main-product-image" src="/img/product3.jpg" alt="Product Image" onclick="openLightbox(this.src)">
             </div>
             <div class="thumbnail-images">
-                <img class="thumbnail" src="/img/product1.jpg" alt="Product Thumbnail">
-                <img class="thumbnail" src="/img/product2.jpg" alt="Product Thumbnail">
+                <img class="thumbnail" src="/img/product1.jpg" alt="Product Thumbnail" onclick="changeImage('/img/product1.jpg')">
+                <img class="thumbnail" src="/img/product2.jpg" alt="Product Thumbnail" onclick="changeImage('/img/product2.jpg')">
             </div>
             <div class="product-info">
                 <h1>პროდუქციის დასახელება</h1>
@@ -76,7 +76,7 @@
                     <img src="/img/product1.jpg" alt="Related Product">
                     <h3>პროდუქცია</h3>
                     <p>10 ₾</p>
-                    <a href="Final-course/cart.html">
+                    <a href="/cart.html">
                         <button class="add-to-cart">კალათში დამატება</button>
                     </a>
                 </div>
