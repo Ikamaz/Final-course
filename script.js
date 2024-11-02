@@ -23,3 +23,11 @@ document.querySelector('#burger').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('active');
   document.querySelector('.nav-product').classList.toggle('active');
 });
+
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
